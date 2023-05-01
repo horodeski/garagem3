@@ -18,17 +18,22 @@ class Categoria(models.Model):
 
 class Acessorio(models.Model):
     descricao = models.CharField(max_length=100)
-
     def __str__(self):
         return self.descricao
+        
+    class Meta:
+        verbose_name = "Acessório"
 
+    
 
 class Cor(models.Model):
     descricao = models.CharField(max_length=100)
-
     def __str__(self):
         return self.descricao
-
+    
+    class Meta:
+        verbose_name_plural = "Cores"
+    
 
 class Veiculo(models.Model):
     marca = models.ForeignKey(Marca, on_delete=models.PROTECT, related_name="veiculos")
@@ -43,3 +48,6 @@ class Veiculo(models.Model):
 
     def __str__(self):
         return f"{self.marca} ({self.categoria}, {self.ano}, {self.cor})"
+    
+    class Meta:
+        verbose_name = "Veículo"
