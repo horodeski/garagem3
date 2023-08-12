@@ -1,10 +1,11 @@
 from rest_framework.viewsets import ModelViewSet
 
-from garagem.models import Marca, Categoria, Cor, Veiculo, Acessorio
+from garagem.models import Marca, Categoria, Cor, Veiculo, Acessorio, Modelo
 from garagem.serializers import (
     MarcaSerializer,
     CategoriaSerializer,
     CorSerializer,
+    ModeloSerializer,
     VeiculoSerializer,
     VeiculoListSerializer,
     VeiculoDetailSerializer,
@@ -25,6 +26,10 @@ class CategoriaViewSet(ModelViewSet):
 class CorViewSet(ModelViewSet):
     queryset = Cor.objects.all()
     serializer_class = CorSerializer
+
+class ModeloViewSet(ModelViewSet):
+    queryset = Modelo.objects.all()
+    serializer_class = ModeloSerializer
 
 
 class AcessorioViewSet(ModelViewSet):
