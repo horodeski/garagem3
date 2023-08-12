@@ -12,7 +12,7 @@ authors = [
     {name = "", email = ""},
 ]
 dependencies = [
-    "django>=4.1.7",
+    "django>=4.2.4",
     "djangorestframework>=3.14.0",
 ]
 requires-python = ">=3.10"
