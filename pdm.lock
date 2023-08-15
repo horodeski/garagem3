@@ -207,9 +207,7 @@ requires_python = ">=3.6"
 summary = "Implementation of RFC 6570 URI Templates"
 
 [metadata]
-lock_version = "4.2"
-cross_platform = true
-groups = ["default", "dev"]
+lock_version = "4.1"
 content_hash = "sha256:724a713099998423c5e5b91409f9442f47d7fe0f7ef04b48d2e104f3548a22f6"
 
 [metadata.files]
